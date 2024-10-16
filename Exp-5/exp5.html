@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipe Form</title>
+    <link rel="stylesheet" href="exp5.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Food Recipe Form</h1>
+        <form id="recipeForm" onsubmit="return validateForm()">
+            <label for="recipeName">Recipe Name:</label>
+            <input type="text" id="recipeName" name="recipeName" required>
+
+            <label for="ingredients">Ingredients:</label>
+            <textarea id="ingredients" name="ingredients" required></textarea>
+
+            <label for="instructions">Instructions:</label>
+            <textarea id="instructions" name="instructions" required></textarea>
+
+            <label for="cookingTime">Cooking Time (in minutes):</label>
+            <input type="number" id="cookingTime" name="cookingTime" required min="1">
+
+            <input type="submit" value="Submit">
+            <p id="error-message" class="error-message"></p>
+        </form>
+    </div>
+    <script src="exp5.js"></script>
+</body>
+</html>
