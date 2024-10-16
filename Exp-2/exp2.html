@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume with Image Mapping</title>
+    <link rel="stylesheet" href="exp2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ragul MKG</h1>
+            <p>Full Stack Developer</p>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>A passionate developer with experience in building web applications, working across both frontend and backend technologies.</p>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML / CSS</li>
+                <li>JavaScript</li>
+                <li>React / Angular</li>
+                <li>Node.js / Express</li>
+                <li>SQL / MongoDB</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Experience Section with Image Mapping -->
+    <section class="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="job-mapping">
+                <img src="images/experience-map.jpg" alt="Experience Map" usemap="#experienceMap" class="job-image">
+                
+                <!-- Image map definition -->
+                <map name="experienceMap">
+                    <!-- Define an area for Tech Corp -->
+                    <area shape="rect" coords="0,0,300,200" alt="Tech Corp" href="tech-corp.html" title="Tech Corp">
+                    
+                    <!-- Define an area for Web Solutions -->
+                    <area shape="rect" coords="310,0,600,200" alt="Web Solutions" href="web-solutions.html" title="Web Solutions">
+                </map>
+            </div>
+        </div>
+    </section>
+
+    <section class="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="edu-item">
+                <h3>BS in Computer Science</h3>
+                <p>University of ABC, 2014 - 2018</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ragul | <a href="mailto:mkgragul@gmail.com">Contact Me</a></p>
+        </div>
+    </footer>
+</body>
+</html>
