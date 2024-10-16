@@ -1,0 +1,91 @@
+/* Reset some basic styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Full width on small screens */
+    max-width: 400px; /* Max width for larger screens */
+}
+
+/* Form alignment */
+form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+label {
+    margin: 10px 0 5px; /* Add spacing above and below labels */
+}
+
+input {
+    padding: 10px; /* Add padding for inputs */
+    margin-bottom: 10px; /* Space between inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded corners for inputs */
+}
+
+input:focus {
+    border-color: #4CAF50; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px; /* Space below error messages */
+}
+
+.success {
+    color: green;
+    font-size: 16px;
+    margin-top: 10px; /* Space above success message */
+}
+
+button {
+    padding: 10px; /* Add padding for button */
+    background-color: #3498db; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #2980b9; /* Darken button on hover */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Reduce padding on small screens */
+    }
+
+    input {
+        padding: 8px; /* Adjust input padding */
+    }
+
+    button {
+        padding: 8px; /* Adjust button padding */
+    }
+
+    .success, .error {
+        font-size: 14px; /* Adjust font size for messages */
+    }
+}
