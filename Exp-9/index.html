@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX Example</title>
+  <script>
+    function fetchData() {
+      // Create an XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
+      
+      // Define what happens when the response is ready
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          // When the response is ready, update the content of the div with the server response
+          document.getElementById('result').innerHTML = xhr.responseText;
+        }
+      };
+
+      // Open a connection to the PHP file
+      xhr.open("GET", "fetch_data.php", true);
+
+      // Send the request
+      xhr.send();
+    }
+  </script>
+</head>
+<body>
+
+  <h1>AJAX with PHP Example</h1>
+  <button onclick="fetchData()">Get Data from Server</button>
+
+  <div id="result" style="margin-top: 20px;">
+    <!-- The response from the server will be shown here -->
+  </div>
+
+</body>
+</html>
