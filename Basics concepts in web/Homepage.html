@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Navigation Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+            border-radius: 4px;
+        }
+        section {
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Menu -->
+<nav aria-label="Main Navigation">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://www.example.com" target="_blank" rel="noopener noreferrer">External Link</a></li>
+    </ul>
+</nav>
+
+<!-- Sections -->
+<section id="home">
+    <h2>Home</h2>
+    <p>Welcome to the homepage.</p>
+</section>
+
+<section id="about">
+    <h2>About</h2>
+    <p>This section is about our organization.</p>
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+    <p>Details about the services we offer.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Get in touch with us.</p>
+</section>
+
+</body>
+</html>
