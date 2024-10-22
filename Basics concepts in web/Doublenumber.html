@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Numbers</title>
+    <script>
+        function doubleNumbers(numbers) {
+            return numbers.map(function(num) {
+                return num * 2;
+            });
+        }
+
+        function handleUserInput() {
+            const input = document.getElementById("numberInput").value;
+            const numberArray = input.split(',').map(Number);
+            const doubledArray = doubleNumbers(numberArray);
+            document.getElementById("result").textContent = "Doubled Array: " + doubledArray.join(", ");
+        }
+    </script>         
+</head>
+<body>
+    <h1>Double the Numbers</h1>
+    <p>Enter a comma-separated list of numbers:</p>
+    <input type="text" id="numberInput" placeholder="e.g. 1, 2, 3, 4">
+    <button onclick="handleUserInput()">Double Numbers</button>
+
+    <p id="result"></p>
+</body>
+</html>
