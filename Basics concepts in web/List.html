@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        ol {
+            counter-reset: question-counter;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ol li {
+            counter-increment: question-counter;
+            margin-bottom: 20px;
+        }
+        ol li::before {
+            content: "Q" counter(question-counter) ": ";
+            font-weight: bold;
+        }
+        ol ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        .faq-answer {
+            margin-top: 10px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Frequently Asked Questions</h1>
+
+<!-- FAQ Section -->
+<ol>
+    <li>
+        What is your return policy?
+        <div class="faq-answer">
+            <p>Our return policy allows you to return items within 30 days of purchase. To be eligible for a return, the item must be unused and in the same condition that you received it.</p>
+        </div>
+    </li>
+    
+    <li>
+        How can I track my order?
+        <div class="faq-answer">
+            <p>You can track your order using the tracking number provided in your confirmation email. Follow these steps to track your order:</p>
+            <ul>
+                <li>Go to the <a href="https://www.example.com/track-order" target="_blank">Order Tracking Page</a>.</li>
+                <li>Enter your order number and email address.</li>
+                <li>Click "Track Order" to view the status.</li>
+            </ul>
+        </div>
+    </li>
+
+    <li>
+        Do you offer international shipping?
+        <div class="faq-answer">
+            <p>Yes, we offer international shipping to select countries. Shipping costs will vary depending on the destination. To check if we ship to your country, please visit our <a href="https://www.example.com/shipping" target="_blank">Shipping Information Page</a>.</p>
+        </div>
+    </li>
+
+    <li>
+        What payment methods are accepted?
+        <div class="faq-answer">
+            <p>We accept the following payment methods:</p>
+            <ul>
+                <li>Credit/Debit Cards (Visa, MasterCard, American Express)</li>
+                <li>PayPal</li>
+                <li>Apple Pay</li>
+                <li>Google Pay</li>
+            </ul>
+        </div>
+    </li>
+
+    <li>
+        How do I reset my password?
+        <div class="faq-answer">
+            <p>To reset your password, follow these steps:</p>
+            <ul>
+                <li>Go to the <a href="https://www.example.com/reset-password" target="_blank">Reset Password Page</a>.</li>
+                <li>Enter your registered email address.</li>
+                <li>Click "Submit" and follow the instructions sent to your email.</li>
+            </ul>
+        </div>
+    </li>
+</ol>
+
+</body>
+</html>

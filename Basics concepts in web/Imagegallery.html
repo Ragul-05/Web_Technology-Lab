@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        /* Media Query for larger screens */
+        @media (min-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Responsive Image Gallery</h1>
+
+<!-- Image Gallery -->
+<div class="gallery">
+    <picture>
+        <source srcset="image1-large.jpg" media="(min-width: 768px)">
+        <img src="image1-small.jpg" alt="Description of image 1">
+    </picture>
+    <picture>
+        <source srcset="image2-large.jpg" media="(min-width: 768px)">
+        <img src="image2-small.jpg" alt="Description of image 2">
+    </picture>
+    <picture>
+        <source srcset="image3-large.jpg" media="(min-width: 768px)">
+        <img src="image3-small.jpg" alt="Description of image 3">
+    </picture>
+    <picture>
+        <source srcset="image4-large.jpg" media="(min-width: 768px)">
+        <img src="image4-small.jpg" alt="Description of image 4">
+    </picture>
+    <picture>
+        <source srcset="image5-large.jpg" media="(min-width: 768px)">
+        <img src="image5-small.jpg" alt="Description of image 5">
+    </picture>
+</div>
+
+</body>
+</html>
