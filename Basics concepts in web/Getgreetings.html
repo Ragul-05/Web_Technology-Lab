@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Greeting</title>
+    <script>
+        function greetUser() {
+            const name = prompt("Please enter your name:");
+            if (name) {
+                alert(`Hello, ${name}! Welcome to our website.`);
+            } else {
+                alert("Hello! Welcome to our website.");                 
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Personalized Greeting</h1>
+    <button onclick="greetUser()">Get Greeting</button>
+    <p id="index"></p>
+</body>''
+</html>

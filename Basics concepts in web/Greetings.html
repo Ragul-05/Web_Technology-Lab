@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Greeting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #fd6565;
+        }
+        #greetingForm {
+            margin-top: 20px;
+        }
+        input {
+            padding: 10px;
+            font-size: 1.1rem;
+        }
+        button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            background-color: #fd6565;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        #greetingMessage {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Our Interactive Greeting Page!</h1>
+
+    <form id="greetingForm" onsubmit="displayGreeting(event)">
+        <input type="text" id="userName" placeholder="Enter your name" required />
+        <button type="submit">Greet Me!</button>
+    </form>
+
+    <p id="greetingMessage"></p>
+
+    <script>
+        function displayGreeting(event) {
+            event.preventDefault();  // Prevent form from submitting and refreshing the page
+            const userName = document.getElementById('userName').value;
+            const greetingMessage = document.getElementById('greetingMessage');
+
+            if (userName) {
+                greetingMessage.textContent = `Hello, ${userName}! We're glad you're here.`;
+            } else {
+                greetingMessage.textContent = 'Hello! Welcome to our site.';
+            }
+
+            // Clear the input field after greeting
+            document.getElementById('greetingForm').reset();
+        }
+    </script>
+</body>
+</html>
