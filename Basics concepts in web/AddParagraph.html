@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Paragraph from User Input</title>
+</head>
+<body>
+
+  <h1>Enter text to create a paragraph</h1>
+  <input type="text" id="userText" placeholder="Type your paragraph here">
+  <button onclick="addParagraph()">Add Paragraph</button>
+
+  <script>
+    function addParagraph() {
+      const userInput = document.getElementById('userText').value;
+      if (userInput.trim() !== "") {
+        const newParagraph = document.createElement('p');
+        newParagraph.textContent = userInput;
+        document.body.appendChild(newParagraph);
+        document.getElementById('userText').value = "";
+      } else {
+        alert('Please enter some text!');
+      }
+    }
+  </script>
+
+</body>
+</html>
