@@ -1,0 +1,68 @@
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <script>
+        const books = [
+            {
+                title: "To Kill a Mockingbird",
+                author: "Harper Lee",
+                yearPublished: 1960,
+                description: "A gripping novel about racial injustice in the Deep South."
+            },
+            {
+                title: "1984",
+                author: "George Orwell",
+                yearPublished: 1949,
+                description: "A dystopian novel set in a totalitarian regime under constant surveillance."
+            },
+            {
+                title: "Pride and Prejudice",
+                author: "Jane Austen",
+                yearPublished: 1813,
+                description: "A classic romantic novel exploring themes of love, society, and class."
+            }
+        ];
+
+        function displayBooks() {
+            const bookList = document.getElementById('bookList');
+            books.forEach((book, index) => {
+                const bookContainer = document.createElement('div');
+
+                const titleElement = document.createElement('h2');
+                titleElement.textContent = book.title;
+                bookContainer.appendChild(titleElement);
+
+                const button = document.createElement('button');
+                button.textContent = 'Get Description';
+                button.onclick = function() {
+                    showDescription(index);
+                };
+                bookContainer.appendChild(button);
+
+                const descriptionElement = document.createElement('p');
+                descriptionElement.id = `description-${index}`;
+                bookContainer.appendChild(descriptionElement);
+
+                bookList.appendChild(bookContainer);
+            });
+        }
+
+        function showDescription(index) {
+            const descriptionElement = document.getElementById(`description-${index}`);
+            descriptionElement.textContent = books[index].description;
+        }
+
+        window.onload = function() {
+            displayBooks();
+        };
+    </script>
+</head>
+<body>
+    <h1>Book List</h1>
+    <div id="bookList"></div>
+</body>
+</html>
