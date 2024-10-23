@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built-in Objects in JavaScript</title>
+</head>
+<body>
+
+    <h2>JavaScript Built-in Objects Example</h2>
+    <p id="output"></p>
+
+    <script>
+        let output = '';
+
+        let currentDate = new Date();
+        output += "<b>Date Object:</b> Current date and time: " + currentDate + "<br>";
+
+        let randomNum = Math.random();
+        let squareRoot = Math.sqrt(16);
+        output += "<b>Math Object:</b> Random number: " + randomNum.toFixed(2) + ", Square root of 16: " + squareRoot + "<br>";
+
+        let str = "Hello, World!";
+        let upperStr = str.toUpperCase();
+        let substring = str.substring(0, 5);
+        output += "<b>String Object:</b> Uppercase: " + upperStr + ", Substring: " + substring + "<br>";
+
+        let arr = [10, 20, 30, 40, 50];
+        let arrLength = arr.length;
+        let arrJoined = arr.join(" - ");
+        output += "<b>Array Object:</b> Array length: " + arrLength + ", Joined array: " + arrJoined + "<br>";
+
+        let num = 123.456789;
+        let fixedNum = num.toFixed(2);
+        let parsedInt = Number.parseInt("100px");
+        output += "<b>Number Object:</b> Fixed number: " + fixedNum + ", Parsed integer: " + parsedInt + "<br>";
+
+        document.getElementById("output").innerHTML = output;
+    </script>
+
+</body>
+</html>
