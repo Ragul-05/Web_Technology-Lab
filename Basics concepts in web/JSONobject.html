@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Object Example</title>
+</head>
+<body>
+
+    <h2>JSON Object Representation Example</h2>
+    <p id="output"></p>
+
+    <script>
+        let student = {
+            name: "M.K.G.Ragul",
+            age: 19,
+            department: "Information Technology",
+            skills: ["Java", "C", "Python"],
+            cgpa: 8.83
+        };
+
+        let jsonString = JSON.stringify(student);
+
+        document.getElementById("output").innerHTML = "<b>JSON String:</b> " + jsonString;
+
+        let parsedObject = JSON.parse(jsonString);
+
+        document.getElementById("output").innerHTML += "<br><br><b>Parsed Object:</b> Name: " + parsedObject.name + 
+            ", Age: " + parsedObject.age + 
+            ", Department: " + parsedObject.department + 
+            ", Skills: " + parsedObject.skills.join(", ") + 
+            ", CGPA: " + parsedObject.cgpa;
+    </script>
+
+</body>
+</html>
